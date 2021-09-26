@@ -1,5 +1,5 @@
 export const data = {
-  labels: ["1", "2", "3", "4", "5", "6"],
+  labels: ["Total", "Ipad", "BORIS", "Pullback", "WhatsApp", "Outreach tasks"],
   datasets: [
     {
       label: "# of Red Votes",
@@ -21,18 +21,18 @@ export const data = {
 
 export const options = {
   scales: {
-    yAxes: [
-      {
-        stacked: true,
-        ticks: {
-          beginAtZero: true
-        }
-      }
-    ],
-    xAxes: [
-      {
-        stacked: true
-      }
-    ]
+    x: {
+      stacked: false
+    },
+    y: {
+      ticks: {
+        format: {
+          style: "currency",
+          currency: "USD"
+        },
+        beginAtZero: true
+      },
+      stacked: true
+    }
   }
 };

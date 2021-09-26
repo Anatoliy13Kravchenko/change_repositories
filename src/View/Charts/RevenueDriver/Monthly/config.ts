@@ -50,17 +50,12 @@ export const genData = (years) => {
     labels: period,
     datasets: [
       {
-        barPercentage: 1,
-        categoryPercentage: 1,
+        type: "line",
+        label: "Revenue",
         hoverBorderColor: "#3080d0",
-        hoverBorderWidth: "1",
-        label: "Test",
-        data: [
-          { x: 5, y: null },
-          { x: null, y: 10 },
-          { x: 20, y: 10 }
-        ],
-        backgroundColor: period.map(() => getRandomRgb())
+        borderWidth: 2,
+        fill: false,
+        data: period.map(() => rand())
       },
       {
         barPercentage: 1,
@@ -104,7 +99,6 @@ export const options = {
       stacked: true
     },
     y: {
-      grid: {},
       offset: false,
       ticks: {
         format: {
