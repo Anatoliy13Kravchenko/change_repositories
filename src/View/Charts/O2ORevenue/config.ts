@@ -21,9 +21,6 @@ export const data = {
 
 export const options = {
   scales: {
-    x: {
-      stacked: false
-    },
     y: {
       ticks: {
         format: {
@@ -31,8 +28,7 @@ export const options = {
           currency: "USD"
         },
         beginAtZero: true
-      },
-      stacked: true
+      }
     }
   }
 };

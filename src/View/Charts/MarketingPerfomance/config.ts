@@ -7,7 +7,6 @@ export const genData = () => ({
       type: "line",
       label: "Dataset 1",
       borderColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
-      borderWidth: 2,
       fill: false,
       data: [rand(), rand(), rand(), rand(), rand(), rand()]
     },
@@ -16,12 +15,17 @@ export const genData = () => ({
       label: "Dataset 2",
       backgroundColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
       data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()],
-      borderColor: "white",
-      borderWidth: 2
+      borderColor: "white"
     },
     {
       type: "bar",
       label: "Dataset 3",
+      backgroundColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
+      data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()]
+    },
+    {
+      type: "bar",
+      label: "Dataset 4",
       backgroundColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
       data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()]
     }
@@ -30,12 +34,14 @@ export const genData = () => ({
 
 export const options = {
   scales: {
-    yAxes: [
-      {
-        ticks: {
-          beginAtZero: true
-        }
+    x: {
+      stacked: true
+    },
+    y: {
+      stacked: true,
+      ticks: {
+        beginAtZero: true
       }
-    ]
+    }
   }
 };
