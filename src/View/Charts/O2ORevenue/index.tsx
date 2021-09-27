@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Bar } from "react-chartjs-2";
-import { data, options } from "./config.ts";
+import { data, options } from "./config";
 
 const O2O = () => {
+  // @ts-ignore
   return <Bar data={data} options={options} />;
 };
 

@@ -1,3 +1,4 @@
+/* tslint:disable */
 const rand = () => Math.floor(Math.random() * 255);
 
 export const genData = () => ({
@@ -8,23 +9,19 @@ export const genData = () => ({
       label: "Dataset 1",
       borderColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
       fill: false,
-      data: [rand(), rand(), rand(), rand(), rand(), rand()]
+      data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()]
     },
     {
-      type: "bar",
       label: "Dataset 2",
       backgroundColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
-      data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()],
-      borderColor: "white"
+      data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()]
     },
     {
-      type: "bar",
       label: "Dataset 3",
       backgroundColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
       data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()]
     },
     {
-      type: "bar",
       label: "Dataset 4",
       backgroundColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
       data: [rand(), rand(), rand(), rand(), rand(), rand(), rand()]

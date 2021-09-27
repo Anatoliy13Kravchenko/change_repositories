@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
+/* tslint:disable */
 import { genData, options } from "./config";
 
 const Marketing = () => {
@@ -10,7 +11,7 @@ const Marketing = () => {
 
     return () => clearInterval(interval);
   }, []);
-  // @ts-ignore
+  /* tslint:disable */
   return <Bar data={data} options={options} />;
 };
 

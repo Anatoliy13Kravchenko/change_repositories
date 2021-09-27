@@ -1,13 +1,29 @@
 {
     "include": [
-        "./src/**/*"
+        "./src/index.tsx"
     ],
+    "exclude": [
+        "./src/View/Charts/**/*"
+    ],
+    "ignoreBuildErrors": true,
     "compilerOptions": {
+        "noEmit": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
         "strict": true,
+        "allowJs": true,
+        "module": "esnext",
+        "target": "ES5",
+        "skipLibCheck": true,
         "esModuleInterop": true,
         "lib": [
             "dom",
-            "es2015"
+            "es2015",
+            "es2019"
         ],
         "jsx": "react-jsx"
     }

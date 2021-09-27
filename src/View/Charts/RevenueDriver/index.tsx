@@ -1,7 +1,7 @@
 import Monthly from "./Monthly";
 import Driver from "./Driver";
 import RevenueFactors from "./RevenueFactors";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const RevenueDriver = () => {
   const [years, setYears] = useState(2);
@@ -15,6 +15,7 @@ const RevenueDriver = () => {
             width="20"
             type="number"
             value={years}
+            // @ts-ignore
             onChange={(event) => setYears(event.target.value)}
           />
           years

@@ -50,6 +50,7 @@ const options = {
 };
 
 const Driver = () => {
+  // @ts-ignore
   return <Bar data={data} options={options} />;
 };
 export default Driver;

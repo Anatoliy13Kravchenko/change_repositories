@@ -1,6 +1,6 @@
 const rand = () => Math.round(Math.random() * 2000000 - 1000000);
 
-function generateYearsBetween(startYear = 2020, endYear) {
+function generateYearsBetween(startYear = 2020, endYear: any) {
   const endDate = endYear || new Date().getFullYear();
   let years = [];
   for (var i = startYear; i <= endDate; i++) {
@@ -10,7 +10,7 @@ function generateYearsBetween(startYear = 2020, endYear) {
   return years;
 }
 
-const setPeriod = (years) => {
+const setPeriod = (years: any) => {
   const monthNames = [
     "January",
     "February",
@@ -29,7 +29,7 @@ const setPeriod = (years) => {
   const startPeriodYear = currentYear - years;
   const yearList = generateYearsBetween(startPeriodYear, currentYear);
 
-  return yearList.flatMap((year) => {
+  return yearList.flatMap((year: any) => {
     return monthNames.map((month) => {
       return `${month.substring(0, 3)}-${year}`;
     });
@@ -44,7 +44,7 @@ function getRandomRgb() {
   return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
-export const genData = (years) => {
+export const genData = (years: any) => {
   const period = setPeriod(years);
   return {
     labels: period,
